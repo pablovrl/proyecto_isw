@@ -1,38 +1,38 @@
-<?php 
-    
-    include("../../database/db.php");
-    
+<?php
+
+include("../../database/db.php");
+
 session_start();
 
 $titulo = $_SESSION['sesion']['titulo'];
 $asunto = $_SESSION['sesion']['asunto'];
 $fechaFin = $_SESSION['sesion']['fecha'];
-$opcion = $_SESSION['sesion']['opciones'] + 1; 
+$opcion = $_SESSION['sesion']['opciones'] + 1;
 
-    $votacion = "INSERT INTO Votacion VALUES (null,'$titulo','$asunto', true ,null,'$fechaFin',0,1)";  
+$votacion = "INSERT INTO Votacion VALUES (null,'$titulo','$asunto', true ,null,'$fechaFin',0,1)";
 
-    mysqli_query($con,$votacion);
-    
-    $idVotacionSQL = "SELECT max(id) as id from votacion";
-    $idVotacion = mysqli_query($con,$idVotacionSQL);
-    $fila = mysqli_fetch_array($idVotacion);
-    $idVotacion = $fila["id"];
+mysqli_query($con, $votacion);
 
-  if(isset($_GET['confirmar'])){
+$idVotacionSQL = "SELECT max(id) as id from votacion";
+$idVotacion = mysqli_query($con, $idVotacionSQL);
+$fila = mysqli_fetch_array($idVotacion);
+$idVotacion = $fila["id"];
 
-    for($i=0;$i<$_SESSION['sesion']['opciones'];$i++){
+if (isset($_GET['confirmar'])) {
 
-        $op = $_GET['opcion'.$i];
-        $opciones = "INSERT INTO opcion VALUES (null,'$op',$idVotacion,0)";  
-        mysqli_query($con,$opciones);
-    }
-  } 
+  for ($i = 0; $i < $_SESSION['sesion']['opciones']; $i++) {
 
-    $opciones = "INSERT INTO opcion VALUES (null,'Nulo',$idVotacion,0)";  
-    mysqli_query($con,$opciones);
-   
-    session_destroy();
-    header("Location: ../../index.php"); 
-   
+    $op = $_GET['opcion' . $i];
+    $opciones = "INSERT INTO opcion VALUES (null,'$op',$idVotacion,0)";
+    mysqli_query($con, $opciones);
+  }
+}
 
-?>
+$opciones = "INSERT INTO opcion VALUES (null,'Nulo',$idVotacion,0)";
+mysqli_query($con, $opciones);
+
+$_SESSION['mensaje'] = 'Se ha creado la votación correctamente!';
+$_SESSION['sub_mensaje'] = '';
+$_SESSION['tipo'] = 'success';
+
+header("Location: ../../index.php");
