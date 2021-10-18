@@ -1,0 +1,42 @@
+.page-item.active .page-link{
+    background-color:#738165 !important ; 
+    border-color:#738165 !important;
+}
+
+.boton{
+    background-color: #E3EAA5 !important;
+     color: black;
+     margin-bottom: 1vw;
+}
+
+.centrar-boton{
+    margin-left: 33.3%;
+    margin-top:1vw;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-buscador{
+    background-color: #E3EAA5 !important; 
+    color: black; 
+    border-color:#E3EAA5;
+}
+
+.card-header-text{
+    text-align:center; 
+    background-color: #b0d482 !important;
+}
+
+.card-asunto{
+    margin-top: 1vw; 
+    margin-right:1vw;
+}
+
+.boton-cancelar-buscador{
+    background-color: #E3EAA5 !important; 
+    color: black; 
+    border-color:#E3EAA5;
+    margin-right:33vw;
+}
