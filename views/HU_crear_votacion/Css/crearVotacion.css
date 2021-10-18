@@ -1,0 +1,134 @@
+
+.formularioContainer{
+    width: 700px;
+    height: 94vh; 
+
+    
+}
+.formulario{
+    width: 600px;
+    height: 380px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+.creacionForm{
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.creacionForm h1{
+    font-size: 40px;
+    
+}
+.div-inputTitulo{
+    width: 94%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.div-inputTitulo input{
+    border-radius: 10px;
+    border: none;
+    background-color: #D1E2C2;
+}
+.div-inputAsunto{
+    width: 94%;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.div-inputAsunto textarea{
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #D1E2C2;
+}
+
+.div-selectOpciones{
+    width: 94%;
+    margin-left: 20px;
+    margin-bottom: 12px;
+   
+}
+.div-selectOpciones label{
+    font-size: 20px;
+}
+.div-selectOpciones select{
+    margin-left: 10px;
+}
+.div-fecha{
+    width: 94%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.div-fecha label{
+    font-size: 20px;
+}
+.div-fecha input{
+    margin-left: 20px;
+}
+.div-buttonSiguiente{
+
+    float: right;
+    margin-right: 20px;
+}
+.div-buttonSiguiente button{
+    color: black;
+    background-color: #E3EAA5;
+    border: none;
+}
+
+/*            Asignacion de opciones           */
+
+.asignarOpciones{
+    width: 600px;
+    height: 260px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.opciones{
+    width: 96%;
+    padding-left: 20px;
+    
+
+}
+.opciones input{
+    border-radius: 10px;
+    border: none;
+    background-color: #D1E2C2;
+}
+.div-botonesAsignacion{
+    width: 93%;
+    margin-left: 20px;
+}
+.div-botonesAsignacion button,.botonAtras{
+    color: black;
+    background-color: #E3EAA5;
+    border: none;
+}
+
+
+/*             ERROR            */
+.error,.errorOpciones{
+    width: 500px;
+    height: 180px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+.tituloError{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.fraseError{
+    padding-top: 10px;
+    height: 60px;
+}
+.div-botonVolver{
+    width: 100%;
+    
+}
