@@ -1,3 +1,9 @@
+<?php 
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +15,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../HU_crear_votacion/Css/crearVotacion.css?v=<?php echo time(); ?>" />
 </head>
 
 <body style="background-color: #C3D9AF;">
@@ -28,7 +35,7 @@
                     <a class="nav-link" href="#">Votaciones terminadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Crear votación</a>
+                    <a class="nav-link" href="/proyecto_isw/views/HU_crear_votacion/crearVotacion.php">Crear votación</a>
                 </li>
             </ul>
             <div class="my-2 my-lg-0">
