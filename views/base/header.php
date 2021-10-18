@@ -22,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../../proyecto_isw">Votaciones activas <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../proyecto_isw">Votaciones activas <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Votaciones terminadas</a>
+                    <a class="nav-link" href="../proyecto_isw/views/HU_listar_terminadas/terminadas.php">Votaciones terminadas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Crear votación</a>
