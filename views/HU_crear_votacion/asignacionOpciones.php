@@ -7,6 +7,7 @@
    $numeroName = 0; 
    $numeroOpcion = 1;
 
+   // Almacenar datos en la sesión
    if(isset($_GET['siguiente'])){
     
     $titulo= $_GET['titulo'];

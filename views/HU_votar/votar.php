@@ -2,18 +2,21 @@
 require_once('../../database/db.php');
 
 if (isset($_GET["id"])) {
+
+    // Obtener titulo y asunto de la votación
     $id = $_GET["id"];
     $queryVotacion = "SELECT * FROM votacion WHERE id = $id";
     $resultVotacion = mysqli_query($con, $queryVotacion);
-
-    $queryOpciones = "SELECT * FROM opcion WHERE votacion_id = $id";
-    $resultOpciones = mysqli_query($con, $queryOpciones);
 
     if (mysqli_num_rows($resultVotacion) == 1) {
         $fila = mysqli_fetch_array($resultVotacion);
         $titulo = $fila["titulo"];
         $asunto = $fila["asunto"];
     }
+
+    // Obtener opciones de la votación
+    $queryOpciones = "SELECT * FROM opcion WHERE votacion_id = $id";
+    $resultOpciones = mysqli_query($con, $queryOpciones);
 }
 ?>
 
