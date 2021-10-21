@@ -37,7 +37,7 @@ if (isset($_GET["id"])) {
 <div class="container d-flex align-items-center justify-content-center" style="height: 90vh">
     <div class="card sombra" style="width: 35rem;">
         <div class="card-body">
-            <h5 class="card-title"><?= $titulo ?></h5>
+            <h5 class="card-title" style="text-align: center;"><?= $titulo ?></h5>
             <h6 class="card-subtitle mb-2 text-muted p-2 text-justify"><?= $asunto ?></h6>
             <form action="../../models/HU_votar/addVoto.php" method="POST">
                 <input type="hidden" name="votacion_id" value="<?= $id ?>">
@@ -54,8 +54,8 @@ if (isset($_GET["id"])) {
                     </div>
                 <?php $counter++;
                 endforeach; ?>
-                <div class="offset-10">
-                    <button type="submit" name="submit" value="submit" class="btn btn-success">Votar</button>
+                <div class="" style="display: flex; justify-content: center;">
+                    <button style="width: 200px;" type="submit" name="submit" value="submit" class="btn btn-success">Votar</button>
                 </div>
             </form>
         </div>
