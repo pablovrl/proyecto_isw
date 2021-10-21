@@ -1,6 +1,6 @@
 
 .formularioContainer{
-    width: 700px;
+    width: 100vw;
     height: 94vh; 
 
     
@@ -69,11 +69,13 @@
 }
 .div-buttonSiguiente{
 
-    float: right;
-    margin-right: 20px;
+    width: 100%;
+    
 }
 .div-buttonSiguiente button{
     color: black;
+    margin-right: 20px;
+    float: right;
     background-color: #E3EAA5;
     border: none;
 }
