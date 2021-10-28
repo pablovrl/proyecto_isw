@@ -14,7 +14,7 @@
     <div class="card" style="margin-bottom: 3vh">
         <div class="card-body" style="padding: 0px !important;">
             <h5 class="card-header card-header-text" > <?php echo $row['titulo'] ?></h5>
-            <div class="container">
+            <div class="container" style=" height: 15vh;">
                 <p class="card-text card-asunto">Descripción: <?php echo $row['asunto'] ?></p>                                 
                 <div class="row">
                     <div class="col-6">
