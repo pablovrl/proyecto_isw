@@ -11,7 +11,7 @@ $fechaFin = $_SESSION['sesion']['fecha'];
 $opcion = $_SESSION['sesion']['opciones'] + 1;
 
 // Crear votación en la BD
-$votacion = "INSERT INTO Votacion VALUES (null,'$titulo','$asunto', true ,null,'$fechaFin',0,1)";
+$votacion = "INSERT INTO Votacion VALUES (null,'$titulo','$asunto',null,'$fechaFin',0,1)";
 
 mysqli_query($con, $votacion);
 
