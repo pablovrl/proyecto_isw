@@ -13,7 +13,7 @@ if (isset($_GET['confirmar'])){
 
 
 // Crear votación en la BD
-$votacion = "INSERT INTO votacion VALUES (null,'$titulo','$asunto',null,'$fechaFin',0,1)";
+$votacion = "INSERT INTO votacion VALUES (null,'$titulo','$asunto','$fechaActual','$fechaFin',0,1)";
 
 mysqli_query($con, $votacion);
 
