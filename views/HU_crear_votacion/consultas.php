@@ -10,6 +10,16 @@ $asunto = $_SESSION['sesion']['asunto'];
 $fechaFin = $_SESSION['sesion']['fecha'];
 $opcion = $_SESSION['sesion']['opciones'] + 1;
 
+
+if (isset($_GET['confirmar'])){
+  $titulo = $_GET['titulo'];
+  $asunto = $_GET['asunto'];
+  $fechaFin = $_GET['fecha'];
+  $opcion = $_GET['opciones'];
+
+}
+
+
 // Crear votación en la BD
 $votacion = "INSERT INTO Votacion VALUES (null,'$titulo','$asunto',null,'$fechaFin',0,1)";
 
@@ -25,7 +35,7 @@ $idVotacion = $fila["id"];
 if (isset($_GET['confirmar'])) {
 
   // Crear las opciones de la votación en la BD
-  for ($i = 0; $i < $_SESSION['sesion']['opciones']; $i++) {
+  for ($i = 0; $i < $opcion ; $i++) {
 
     $op = $_GET['opcion' . $i];
     $opciones = "INSERT INTO opcion VALUES (null,'$op',$idVotacion,0)";
@@ -35,7 +45,7 @@ if (isset($_GET['confirmar'])) {
 
 // Crear opción de NULO
 $opciones = "INSERT INTO opcion VALUES (null,'Nulo',$idVotacion,0)";
-mysqli_query($con, $opciones);
+mysqli_query($con, $opciones); 
 
 // Mensaje de alerta para el index
 $_SESSION['mensaje'] = 'Se ha creado la votación correctamente!';

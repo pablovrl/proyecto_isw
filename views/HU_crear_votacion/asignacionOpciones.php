@@ -14,13 +14,6 @@
     $asunto= $_GET['asunto'];
     $option = $_GET['opcion'];
     $fecha= $_GET['fecha'];
-
-      $_SESSION['sesion']= array(); 
-     
-      $_SESSION['sesion']['titulo']= $titulo;
-      $_SESSION['sesion']['asunto']= $asunto;
-      $_SESSION['sesion']['opciones']= $option;
-      $_SESSION['sesion']['fecha']= $fecha;
   
       
    }
@@ -57,6 +50,11 @@
                   <button  name="confirmar" class="btn btn-success">Confirmar</button>
 
               </div>
+                <input type="hidden" name="titulo" value="<?=$titulo?>"/>
+                <input type="hidden" name="asunto" value="<?=$asunto?>"/>
+                <input type="hidden" name="fecha" value="<?=$fecha?>"/>
+                <input type="hidden" name="opciones" value="<?=$option?>" />
+
           </form>
         </div>
 
