@@ -2,14 +2,6 @@
 
 include("../../database/db.php");
 
-session_start();
-
-// Recibir datos de la sesión
-$titulo = $_SESSION['sesion']['titulo'];
-$asunto = $_SESSION['sesion']['asunto'];
-$fechaFin = $_SESSION['sesion']['fecha'];
-$opcion = $_SESSION['sesion']['opciones'] + 1;
-
 
 if (isset($_GET['confirmar'])){
   $titulo = $_GET['titulo'];
@@ -21,7 +13,7 @@ if (isset($_GET['confirmar'])){
 
 
 // Crear votación en la BD
-$votacion = "INSERT INTO Votacion VALUES (null,'$titulo','$asunto',null,'$fechaFin',0,1)";
+$votacion = "INSERT INTO votacion VALUES (null,'$titulo','$asunto',null,'$fechaFin',0,1)";
 
 mysqli_query($con, $votacion);
 
