@@ -2,13 +2,12 @@
 .formularioContainer{
     width: 100vw;
     height: 94vh; 
-
     
 }
 .formulario{
-    width: 600px;
-    height: 380px;
-    margin-bottom: 100px;
+    width: 900px;
+    height: 520px;
+    margin-bottom: 60px;
     background-color: white;
     border-radius: 20px;
 }
@@ -19,28 +18,34 @@
     margin-bottom: 20px;
 }
 .creacionForm h1{
-    font-size: 40px;
+    font-size: 50px;
     
 }
 .div-inputTitulo{
-    width: 94%;
+    width: 95.5%;
+   
     margin-left: 20px;
     margin-bottom: 20px;
 }
 .div-inputTitulo input{
     border-radius: 10px;
     border: none;
+    height: 60px;
+    font-size: 20px;
     background-color: #D1E2C2;
 }
 .div-inputAsunto{
-    width: 94%;
+    width: 95.5%;
     margin-left: 20px;
     margin-bottom: 25px;
 }
 .div-inputAsunto textarea{
     resize: none;
+    padding-top: 10px;
+    font-size: 20px;
     border: none;
     border-radius: 10px;
+    height: 120px;
     background-color: #D1E2C2;
 }
 
@@ -51,21 +56,27 @@
    
 }
 .div-selectOpciones label{
-    font-size: 20px;
+    font-size: 30px;
 }
 .div-selectOpciones select{
-    margin-left: 10px;
+    margin-left: 40px;
+    width: 50px;
+    font-size: 20px;
+    height: 40px;
+   
 }
 .div-fecha{
     width: 94%;
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .div-fecha label{
-    font-size: 20px;
+    font-size: 30px;
 }
 .div-fecha input{
-    margin-left: 20px;
+    margin-left: 30px;
+    height: 40px;
+    font-size: 20px;
 }
 .div-buttonSiguiente{
 
@@ -74,8 +85,10 @@
 }
 .div-buttonSiguiente button{
     color: black;
-    margin-right: 20px;
+    width: 160px;
+    margin-right: 25px;
     float: right;
+    font-size: 20px;
     background-color: #E3EAA5;
     border: none;
 }
