@@ -18,11 +18,10 @@
  include('../../models/HU_listar_terminadas_query/card_query.php');?>
 <!-- Body -->
   <h1 style="text-align:center; margin-top:1vh;">Votaciones Terminadas</h1>
-  <div class="container">
+  <div class="container buscar">
 
 <!-- Buscador SQL --> 
-    <nav class="navbar navbar-light justify-content-between" style="margin-bottom: 5vh;">
-      <form class="form-inline" action="" method="GET" style="margin-left: -0.8vw;">
+      <form class="form-busqueda" action="" method="GET" style="margin-left: -0.8vw;">
         <input class="form-control mr-sm-2" type="text" name="busqueda" id="busqueda" placeholder="Buscar titulo de votación">
         <input class="btn my-2 my-sm-0 boton-buscador" type="submit" name="enviar" value="Buscar">
       </form>
@@ -32,11 +31,10 @@
         $count_results = mysqli_num_rows($buscadorSQL);
       } ?>
     <?php if(isset($buscadorSQL)){ ?>
-    <form class="form-inline" action="terminadas.php">
-      <input class="btn my-2 my-sm-0 boton-cancelar-buscador" type="submit" value="Cancelar Busqueda" >
+    <form class="" action="terminadas.php" style="display: inline">
+      <input class="btn my-2 my-sm-0 boton-cancelar-buscador" style="margin-left: 8px" type="submit" value="Cancelar Busqueda" >
     </form> <?php } ?>
-    </nav>
-
+    
   </div>
 
 <div class="container mt-3">

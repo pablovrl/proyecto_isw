@@ -25,17 +25,17 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="../../../proyecto_isw/index.php">Votaciones activas <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="../../../proyecto_isw/views/HU_listar_terminadas/terminadas.php">Votaciones terminadas</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="/proyecto_isw/views/HU_crear_votacion/crearVotacion.php">Crear votación</a>
                 </li>
             </ul>
             <div class="my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pablo Villarroel</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Ignacio González</a>
                     </li>
                 </ul>
             </div>

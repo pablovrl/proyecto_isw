@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .page-item.active .page-link{
     background-color:#738165 !important ; 
     border-color:#738165 !important;
@@ -38,5 +42,16 @@
     background-color: #E3EAA5 !important; 
     color: black; 
     border-color:#E3EAA5;
-    margin-right:33vw;
+    margin: 0;
+}
+
+.form-busqueda {
+    display: inline-flex;
+    width: 500px;
+}
+
+.buscar {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
 }
