@@ -22,18 +22,19 @@
   ?>
 
 
-<div class="container d-flex align-items-center justify-content-center formularioContainer">  
+<div class="container col-12 d-flex align-items-center justify-content-center"
+      style="height: 94vh">  
         
-        <div class="asignarOpciones">
+        <div class="shadow-lg p-3 mb-5 col-sm-10 col-lg-7">
         
             <form method="GET" action="<?="consultas.php"?>"> 
-              <div>
-                <h1 class="creacionForm">Asignación de opciones</h1>
+              <div class="col-12 mt-1 pl-2 mb-3">
+                <h1 class="h1">Asignación de opciones</h1>
               </div>
 
                 <?php 
                   for($i=0;$i<$option;$i++){
-                    echo '<div class="opciones"><input class="form-control" type="text" name="opcion'.$numeroName++.'" placeholder="opcion'.$numeroOpcion++.'" required></div><br>';
+                    echo '<div class="col-12 pl-2"><input class="form-control rounded-lg" type="text" name="opcion'.$numeroName++.'" placeholder="opcion'.$numeroOpcion++.'" required></div><br>';
                     
                   }
 
@@ -46,9 +47,9 @@
                 ?>
               
 
-                <div class="div-botonesAsignacion d-flex justify-content-between">
-                    <a name="atras" class="btn btn-success botonAtras" href=<?="crearVotacion.php?titulo=$titulo&asunto=$asunto&fecha=$fecha"?>>Atras</a>
-                    <button  name="confirmar" class="btn btn-success">Confirmar</button>
+                <div class="col-12">
+                    <!-- <a name="atras" class="btn btn-success botonAtras" href=>Atras</a> -->
+                    <button  name="confirmar" class="btn btn-success float-right">Confirmar</button>
 
                 </div>
                   <input type="hidden" name="titulo" value="<?=$titulo?>"/>
