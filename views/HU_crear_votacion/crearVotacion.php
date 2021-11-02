@@ -3,14 +3,14 @@
     <?php 
       $titulo="";
       $asunto="";
+      $fecha="";
 
       
-      if(isset($_GET['titulo'])){
+      if(isset($_GET['fecha'])){
         
         $titulo = $_GET['titulo'];
         $asunto = $_GET['asunto'];
         $fecha = $_GET['fecha'];
-        
       }
       
     
@@ -24,10 +24,10 @@
                   <h1 class="text-left">Creación Formulario</h1>
               </div>
               <div class="div-inputTitulo"> 
-                  <input class="inputTitulo form-control" type="text" name="titulo"  value="<?=$titulo?>" placeholder="Introduzca el titulo de la votación..." required/> 
+                  <input class="inputTitulo form-control" type="text" name="titulo"  value="<?=$titulo?>" onpaste="return false" placeholder="Introduzca el titulo de la votación..." required/> 
               </div>
               <div class="div-inputAsunto"> 
-                  <textarea rows="2" class="inputAsunto form-control" type="textarea" name="asunto" placeholder="Introduzca el asunto de la votación..." required><?=$asunto?></textarea> 
+                  <textarea rows="2" class="inputAsunto form-control" type="textarea" name="asunto" onpaste="return false" placeholder="Introduzca el asunto de la votación..." required><?=$asunto?></textarea> 
               </div>
               <div class="div-selectOpciones"> 
                   <label for="opciones">Cantidad de opciones: </label>
@@ -42,7 +42,7 @@
                   <label for="fecha">Fecha de termino:   </label>
 
                   <input type="datetime-local" id="fecha" name="fecha"
-                  name="meeting-time" min="" max="" value="<?=$fecha?>" required>
+                  name="meeting-time" min="" max="" value=<?=$fecha?> required>
 
               </div>
               <div class="div-buttonSiguiente">
