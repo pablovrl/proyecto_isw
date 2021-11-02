@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../HU_crear_votacion/Css/crearVotacion.css?v=<?php echo time(); ?>" />
 </head>
 
-<body style="background-color: #C3D9AF;">
+<body style="background-color: #fcfcfc;">
     <!-- NAV-BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #738165;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #87a581;">
         <span class="navbar-brand mb-0 h1">Junta de vecinos</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,19 +22,19 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="../../../proyecto_isw/index.php">Votaciones activas <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="../../../proyecto_isw/views/HU_listar_terminadas/terminadas.php">Votaciones terminadas</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="/proyecto_isw/views/HU_crear_votacion/crearVotacion.php">Crear votación</a>
                 </li>
             </ul>
             <div class="my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="#">Ignacio González</a>
                     </li>
                 </ul>
