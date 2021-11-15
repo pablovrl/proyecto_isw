@@ -19,7 +19,14 @@
                         <button class="btn btn-success" data-toggle="modal" data-target=<?="#modal".$contador?> >Ir a votar!</button>
                     </div>
                     <div class="card-footer text-muted">
-                        <span class=""> <strong>Termina </strong> <?= $row['fecha_termino'] ?></span>
+                        <?php
+                        // Formateando la fecha
+                        $fechaFormateada = explode(' ', $row['fecha_termino']);
+                        $fechaSeparada = explode('-', $fechaFormateada[0]);
+                        $horaTermino = $fechaFormateada[1];
+                        $fechaTermino = $fechaSeparada[2] . '/' . $fechaSeparada[1] . '/' . $fechaSeparada[0];
+                        ?>
+                        <span class=""> <strong>Termina </strong> <?= "el " . $fechaTermino . " a las " . $horaTermino ?></span>
                     </div>
                 </div>
             </div>

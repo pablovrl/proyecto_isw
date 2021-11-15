@@ -1,11 +1,12 @@
 <?php
 
 date_default_timezone_set("America/Santiago");
-$fechaActual = date("Y-m-d") . " " . date("H:i");
+$fechaActual = date("Y-m-d H:i");
+
 
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "";
+$db_pass = "djaskldjas";
 $db_name = "proyecto_isw";
 
 // $db_host = "localhost";
