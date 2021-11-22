@@ -2,8 +2,15 @@
 
 <?php require("../base/header.php") ?>
 
-    <div class="container col-12 my-2 my-md-5"
-        >
+    <style>
+        @media (min-width: 600px) {
+            .res {
+                height: 90vh;
+            }
+        }
+    </style>
+
+    <div class="container col-12 d-flex align-items-center justify-content-center res">
         <div class="container my-2 my-md-5 shadow-lg p-3 p-md-5  bg-white rounded-lg col-12 col-xl-6 ">
         <form method="GET" action="asignacionOpciones.php">
                 <div class="col-12 mt-3 mt-md-0 pl-3 mb-4 text-center text-md-left">

@@ -21,9 +21,15 @@
 
 
   ?>
+    <style>
+        @media (min-width: 600px) {
+            .res {
+                height: 90vh;
+            }
+        }
+    </style>
 
-
-<div class="container d-flex pt-4 pt-md-4 col-12 my-2 my-md-5 ">  
+<div class="container col-12 d-flex align-items-center justify-content-center res">  
         
         <div class="container  my-md-5 shadow-lg p-3 p-md-5  bg-white rounded-lg col-12 col-xl-6">
         
