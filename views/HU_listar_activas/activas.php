@@ -1,5 +1,7 @@
-<?php include("./models/HU_listar_activas/cardQuery.php"); ?>
-
+<?php 
+include("../../views/base/header.php");
+include("../../models/HU_listar_activas/cardQuery.php");
+?>
 
 <div class="container">
     <div class="row justify-content-center my-4">
@@ -30,7 +32,11 @@
                     </div>
                 </div>
             </div>
-            <?php require("./views/HU_votar/votarModal.php") ?>
+            <?php require("../HU_votar/votarModal.php") ?>
         <?php $contador++; endforeach; ?>
     </div>
 </div>
+
+<?php 
+include("../../views/base/footer.php");
+?>

@@ -42,8 +42,6 @@ require_once("../../database/db.php");
         $_SESSION['sub_mensaje'] = 'Muchas gracias por votar.';
         $_SESSION['tipo'] = 'success';
 
-        header('Location: ../../index.php');
+        header("Location: ../../views/HU_listar_activas/activas.php");
     }
-
-    
 ?>
