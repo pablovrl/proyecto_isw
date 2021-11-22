@@ -6,7 +6,7 @@
     
    $numeroName = 0; 
    $numeroOpcion = 1;
-   const boton = false;
+  
 
    // Almacenar datos en la sesión
    if(isset($_GET['siguiente'])){
@@ -23,19 +23,18 @@
   ?>
 
 
-<div class="container col-12 d-flex align-items-center justify-content-center"
-      style="height: 94vh">  
+<div class="container d-flex pt-4 pt-md-4 col-12 my-2 my-md-5 ">  
         
-        <div class="shadow-lg p-5 mb-4 bg-white rounded-lg col-sm-12 col-lg-6">
+        <div class="container  my-md-5 shadow-lg p-3 p-md-5  bg-white rounded-lg col-12 col-xl-6">
         
-            <form id="form" method="GET" action=""> 
-              <div class="col-12 pl-2 mb-5">
+            <form id="form" method="GET" action="consultas.php"> 
+              <div class="col-12 pl-2 mt-3 mt-md-0 mb-5 text-md-left text-center">
                 <h1 class="h1">Asignación de opciones</h1>
               </div>
 
                 <?php 
                   for($i=0;$i<$option;$i++){
-                    echo '<div class="col-12 pl-2 mb-3"><input class="form-control rounded-lg"  style="background-color: #ffff; font-size: 20px; height: 60px;"  type="text" name="opcion'.$numeroName++.'" placeholder="opción'.$numeroOpcion++.'" required></div><br>';
+                    echo '<div class="col-12 pl-2 mt-3"><input class="form-control rounded-lg"  style="background-color: #ffff; font-size: 20px; height: 55px;"  type="text" name="opcion'.$numeroName++.'" placeholder="opción'.$numeroOpcion++.'" required></div><br>';
                     
                   }
 
@@ -48,18 +47,9 @@
                 ?>
               
 
-                <div class="col-12 pl-2">
-                    <button name="atras" class="btn btn-success float-left" onclick="actionForm(this.form.id, 'crearVotacion.php'); return false;" >Atras</button>
-                    <button  name="confirmar" class="btn btn-success float-right" onclick="actionForm(this.form.id, 'consultas.php'); return false;"  >Confirmar</button>
-
-                    <script>
-                      function actionForm(form, act)
-                      {
-                          
-                          document.getElementById(form).action=act;
-                          document.getElementById(form).submit();
-                      }
-                    </script>
+                <div class="col-12 d-flex justify-content-center top justify-content-md-end mt-2 mb-2 ">
+                    
+                    <button  name="confirmar" class="btn btn-success float-right"  >Confirmar</button>
 
                 </div>
 
@@ -69,7 +59,7 @@
                   
                   <input type="hidden" name="opciones" value="<?=$option?>" />
 
-
+                  
             </form>
           
         </div>
