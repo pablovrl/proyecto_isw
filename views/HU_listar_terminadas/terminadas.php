@@ -16,7 +16,7 @@ include('../../models/HU_listar_terminadas_query/card_query.php');
     <!-- Buscador SQL -->
     <form class="form-inline mb-4" action="" method="GET">
       <div class="form-group">
-        <input class="form-control" type="text" name="busqueda" id="busqueda" placeholder="Buscar titulo de votación">
+        <input class="form-control" type="text" name="busqueda" id="busqueda" placeholder="Buscar título de votación">
         <input class="btn btn-outline-success mx-2" type="submit" name="enviar" value="Buscar">
       </div>
     </form>
@@ -27,7 +27,7 @@ include('../../models/HU_listar_terminadas_query/card_query.php');
     } ?>
     <?php if (isset($buscadorSQL)) { ?>
       <form class="" action="terminadas.php" style="display: inline">
-        <input class="btn btn-outline-danger" type="submit" value="Cancelar Busqueda">
+        <input class="btn btn-outline-danger" type="submit" value="Cancelar Búsqueda">
       </form> <?php } ?>
   </div>
 
@@ -46,7 +46,7 @@ include('../../models/HU_listar_terminadas_query/card_query.php');
         }
       } else { ?>
         <div class="col-12" style="text-align: center;">
-          <p>No se encuentra ninguna votación con ese titulo!</p>
+          <p>No se encuentra ninguna votación con ese título!</p>
         </div>
     <?php }
     }
