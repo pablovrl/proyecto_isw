@@ -38,9 +38,12 @@ require_once("../../database/db.php");
         mysqli_query($con, $updateOpcionQuery);
         
         // Mensaje de alerta
+        session_id("mensaje");
+        session_start();
         $_SESSION['mensaje'] = 'Su voto ha sido guardado correctamente!';
         $_SESSION['sub_mensaje'] = 'Muchas gracias por votar.';
         $_SESSION['tipo'] = 'success';
+        session_write_close();
 
         header("Location: ../../views/HU_listar_activas/activas.php");
     }

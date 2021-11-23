@@ -8,19 +8,18 @@ if (isset($_GET['confirmar'])){
   $asunto = $_GET['asunto'];
   $fechaFin = $_GET['fecha'];
   $opcion = $_GET['opciones'];
- 
 
 }
 
 
 
 // Crear votación en la BD
- $votacion = "INSERT INTO votacion VALUES (null,'$titulo','$asunto','$fechaActual','$fechaFin',0,1)";
+$votacion = "INSERT INTO votacion VALUES (null,'$titulo','$asunto','$fechaActual','$fechaFin',0,1,1)";
 
 mysqli_query($con, $votacion); 
 
 // Recibir ID de la última votación para asignarlo a las opciones
- $idVotacionSQL = "SELECT max(id) as id from votacion";
+$idVotacionSQL = "SELECT max(id) as id from votacion";
 $idVotacion = mysqli_query($con, $idVotacionSQL);
 $fila = mysqli_fetch_array($idVotacion);
 $idVotacion = $fila["id"]; 
@@ -42,8 +41,11 @@ $opciones = "INSERT INTO opcion VALUES (null,'Nulo',$idVotacion,0)";
 mysqli_query($con, $opciones);  
 
 // Mensaje de alerta para el index
+session_id("mensaje");
+session_start();
 $_SESSION['mensaje'] = 'Se ha creado la votación correctamente!';
 $_SESSION['sub_mensaje'] = '';
 $_SESSION['tipo'] = 'success';
+session_write_close();
 
-header("Location: ../../index.php");
+header("Location: ../../views/HU_listar_activas/activas.php");

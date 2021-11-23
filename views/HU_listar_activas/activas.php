@@ -1,6 +1,7 @@
 <?php 
 include("../../views/base/header.php");
 include("../../models/HU_listar_activas/cardQuery.php");
+include("../HU_votar/alerta.php");
 ?>
 
 <div class="container">
