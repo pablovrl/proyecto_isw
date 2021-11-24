@@ -8,7 +8,6 @@ if (isset($_GET['confirmar'])){
   $asunto = $_GET['asunto'];
   $fechaFin = $_GET['fecha'];
   $opcion = $_GET['opciones'];
-
 }
 
 

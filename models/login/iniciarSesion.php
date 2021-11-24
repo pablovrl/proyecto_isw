@@ -11,7 +11,7 @@ if (mysqli_num_rows($vecino) == 1) {
   session_id("usuario");
   session_start();
   $fila = mysqli_fetch_array($vecino);
-  $_SESSION['id'] = $fila['nombres'];
+  $_SESSION['id'] = $fila['id'];
   $_SESSION['nombres'] = $fila['nombres'];
   $_SESSION['apellidos'] = $fila['apellidos'];
   $_SESSION['esAdmin'] = $fila['rol_id'] == 1 ? True : False;
