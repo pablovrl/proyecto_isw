@@ -2,6 +2,11 @@
 include("../../views/base/header.php");
 include("../../models/HU_listar_activas/cardQuery.php");
 include("../HU_votar/alerta.php");
+
+session_id("usuario");
+session_start();
+session_write_close();
+
 ?>
 
 <div class="container">
@@ -20,6 +25,11 @@ include("../HU_votar/alerta.php");
                         <p class="card-text"><?= $row['asunto'] ?></p>
                         <p class="card-text"> <strong> <?= $row['total_votos'] ?> </strong> personas ya han votado, ¿Qué esperas? </p>
                         <button class="btn btn-success" data-toggle="modal" data-target=<?="#modal".$contador?> >Ir a votar!</button>
+
+                        <?php if ($_SESSION["esAdmin"]) : ?>
+                            <button class="btn btn-success" data-toggle="modal" data-target=<?="#modalEditar".$contador?>>Editar</button>
+				        <?php endif; ?>
+                       
                     </div>
                     <div class="card-footer text-muted">
                         <?php
@@ -33,7 +43,12 @@ include("../HU_votar/alerta.php");
                     </div>
                 </div>
             </div>
-            <?php require("../HU_votar/votarModal.php") ?>
+            <?php 
+                require("../HU_votar/votarModal.php");
+                require("../HU_editarVotacion/editarModal.php");
+           
+            ?>
+            
         <?php $contador++; endforeach; ?>
     </div>
 </div>

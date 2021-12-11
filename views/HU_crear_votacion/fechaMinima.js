@@ -24,3 +24,4 @@ today = yyyy+'-'+mm+'-'+dd+'T'+th+':'+m;
 
 
 document.getElementById("fecha").min = today;
+
