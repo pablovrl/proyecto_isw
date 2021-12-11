@@ -36,7 +36,7 @@ if (mysqli_num_rows($resultVotacion) == 1) {
                             <lable class="h4 mb-2" for="título">Título</lable>
                             <input class="rounded-lg col-12 h-20 bg form-control  mt-2" 
                             style="background-color: #ffff; font-size: 20px; height: 60px; margin-top: 5px"
-                            type="text" name="titulo" maxlength="200" value=<?= $row['titulo']?> required/> 
+                            type="text" name="titulo" maxlength="200" value="<?= $row['titulo']?>" required/> 
 
                         </div>
                 
