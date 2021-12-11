@@ -20,7 +20,7 @@ if (mysqli_num_rows($ganador_consulta) == 1) {
             <p class="card-text"><?= $row['asunto'] ?></p>
             <p class="card-text "> <strong>Votos totales: </strong> <?= $row['total_votos'] ?></p>
             <p class="card-text "><strong>Opción ganadora: </strong>  <?=$nombre_ganador?> con <strong> <?=$row['ganador']?> </strong> votos</p>
-            <a href="#" class="btn btn-success">Más detalles</a>
+            <a href=<?="../HU_mostrar_detalles/detalles.php?id=" . $row['votacion_id']?> class="btn btn-success">Más detalles</a>
             <a href=<?="../HU_comentar/comentarios.php?id=" . $row['votacion_id']?> class="btn btn-success">Comentar</a>
         </div>
         <div class="card-footer text-muted">
