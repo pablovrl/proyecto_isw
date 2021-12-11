@@ -15,7 +15,7 @@
     $fechaTermino = $_GET['hasta'];
     $buscadorSQL = $con->query("SELECT *, max(opcion.cantidad_votos) as 'ganador' from votacion, opcion WHERE votacion.id = opcion.votacion_id and 
     (votacion.titulo LIKE '%$busqueda%' or votacion.asunto LIKE '%$busqueda%' or opcion.nombre LIKE '%$busqueda%') 
-    and votacion.fecha_termino BETWEEN ('$fechaInicio' and '$fechaTermino') and votacion.fecha_termino < NOW() and
+    and votacion.fecha_termino BETWEEN ('$fechaInicio' and '$fechaTermino') and votacion.fecha_termino <= '$fechaActual' and
     votacion.activa = 1 group by votacion.id ORDER BY `ganador` DESC;");
     if($fechaInicio < $fechaTermino){    
         if (mysqli_num_rows($buscadorSQL) <= 1) {

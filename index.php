@@ -40,7 +40,42 @@ session_start();
       </div>
       <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
+    
+      <h2 class="mt-5">Credenciales de acceso</h2>
+
+    <table class="table mt-3">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">RUT</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>15200947-K</td>
+          <td>Ignacio González</td>
+          <td>Administrador</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>20255414-8</td>
+          <td>Elvis Rodríguez</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>20656895-K</td>
+          <td>Amanda Acevedo</td>
+          <td>Usuario</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+
 
 
 
