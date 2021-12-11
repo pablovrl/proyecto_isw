@@ -81,7 +81,7 @@ if (mysqli_num_rows($resultVotacion) == 1) {
 
                 </div>
 
-                    <input type="hidden" name="id" value=<?=$id?>/>
+                    <input type="hidden" name="id" value="<?=$id?>"/>
                     <!-- BOTON EDITAR -->
 
                     <div class="modal-footer d-flex col-12 justify-content-center">

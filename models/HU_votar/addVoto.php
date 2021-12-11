@@ -2,8 +2,15 @@
 
 require_once("../../database/db.php");
 
+
+
     if(isset($_POST['submit'])) {
+
+      session_id("usuario");
+      session_start();
+      session_write_close();
         
+        $id_usuario = $_SESSION["id"];
         $id_opcion = $_POST["opcion"];
         $id_votacion = $_POST["votacion_id"];
 
@@ -36,6 +43,10 @@ require_once("../../database/db.php");
         // Hacer la actualización de votos en la base de datos
         $updateOpcionQuery = "UPDATE votacion SET total_votos = $votos WHERE id = $id_votacion";
         mysqli_query($con, $updateOpcionQuery);
+
+        // Añadir voto a tabla vota
+        $addVotaQuery = "INSERT INTO vota VALUES ($id_usuario, $id_opcion)";
+        mysqli_query($con, $addVotaQuery);
         
         // Mensaje de alerta
         session_id("mensaje");
