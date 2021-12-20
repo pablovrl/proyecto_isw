@@ -36,7 +36,11 @@ $fechaNueva = $fechaFormateada[0].'T'.$fechaFormateada[1];
                             <lable class="h4 mb-2" for="título">Título</lable>
                             <input class="rounded-lg col-12 h-20 bg form-control  mt-2" 
                             style="background-color: #ffff; font-size: 20px; height: 60px; margin-top: 5px"
+<<<<<<< HEAD
                             type="text" name="titulo" maxlength="200" value="<?= $titulo?>" required/> 
+=======
+                            type="text" name="titulo" maxlength="200" value="<?= $row['titulo']?>" required/> 
+>>>>>>> 382f067eee2958690017435fe745331ae051c54e
 
                         </div>
                 
