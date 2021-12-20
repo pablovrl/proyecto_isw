@@ -7,7 +7,7 @@ $fechaActual = date("Y-m-d H:i");
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "proyecto_isw";
+$db_name = "proyecto_isw2";
 
 // $db_host = "localhost";
 // $db_user = "id17852257_root";

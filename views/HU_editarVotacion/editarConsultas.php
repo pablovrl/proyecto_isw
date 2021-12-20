@@ -14,7 +14,7 @@ if (isset($_GET['editar'])){
     $estado = $_GET['estado'];
 }
 
-$idVecino = $_SESSION['id'];
+
 
 $editarVotacion = "UPDATE votacion set titulo='$titulo', asunto='$asunto', fecha_termino='$fechaFin', activa=$estado WHERE id='$id'";
 

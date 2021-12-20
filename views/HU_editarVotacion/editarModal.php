@@ -1,18 +1,18 @@
 <?php
 
-
 // Obtener titulo y asunto de la votación
-$id = $row["id"];   //votacion modal
+$id = $row["id"];  
 $queryVotacion = "SELECT * FROM votacion WHERE id = $id";
 $resultVotacion = mysqli_query($con, $queryVotacion);
 
-if (mysqli_num_rows($resultVotacion) == 1) {
-    $fila = mysqli_fetch_array($resultVotacion);
-    $titulo = $fila["titulo"];
-    $asunto = $fila["asunto"];
+$fila = mysqli_fetch_array($resultVotacion);
+$titulo = $fila["titulo"];
+$asunto = $fila["asunto"];
+$fecha = $fila["fecha_termino"];
 
 
-}
+$fechaFormateada = explode(' ', $fecha);
+$fechaNueva = $fechaFormateada[0].'T'.$fechaFormateada[1];
 
 
 ?>
@@ -36,7 +36,7 @@ if (mysqli_num_rows($resultVotacion) == 1) {
                             <lable class="h4 mb-2" for="título">Título</lable>
                             <input class="rounded-lg col-12 h-20 bg form-control  mt-2" 
                             style="background-color: #ffff; font-size: 20px; height: 60px; margin-top: 5px"
-                            type="text" name="titulo" maxlength="200" value=<?= $row['titulo']?> required/> 
+                            type="text" name="titulo" maxlength="200" value="<?= $titulo?>" required/> 
 
                         </div>
                 
@@ -46,7 +46,7 @@ if (mysqli_num_rows($resultVotacion) == 1) {
                         <lable class=" h4" for="asunto">Asunto</lable>
                         <textarea rows="2" class="pt-2 col-12 form-control rounded-lg mt-2"  id="textarea"
                         style="background-color: #ffff; resize: none; font-size: 20px; height: 120px; margin-top: 5px "
-                        maxlength="255" type="textarea" name="asunto" placeholder="Ejemplo: Votación para escoger presidente de la junta de vecinos" required><?= $row['asunto']?></textarea> 
+                        maxlength="255" type="textarea" name="asunto" placeholder="Ejemplo: Votación para escoger presidente de la junta de vecinos" required><?=$asunto?></textarea> 
                     </div>
 
                         <!-- FECHA TERMINO -->
@@ -56,7 +56,7 @@ if (mysqli_num_rows($resultVotacion) == 1) {
 
                         <div class="col-md-6 ml-3 ml-md-0 mt-md-0 mt-2 col-sm-12 d-flex align-items-center justify-content-center">
                             <input type="datetime-local" id="fecha" name="fecha"
-                            style="font-size:20px;"
+                            style="font-size:20px;" value="<?=$fechaNueva?>"
                             name="meeting-time" min="" max="" required>   
                         </div>
 
@@ -81,7 +81,7 @@ if (mysqli_num_rows($resultVotacion) == 1) {
 
                 </div>
 
-                    <input type="hidden" name="id" value=<?=$id?>/>
+                    <input type="hidden" name="id" value="<?=$id?>"/>
                     <!-- BOTON EDITAR -->
 
                     <div class="modal-footer d-flex col-12 justify-content-center">
