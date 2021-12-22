@@ -51,7 +51,7 @@ require("../../models/HU_comentar/getComentarios.php")
         <form action="../../models/HU_comentar/addComentario.php" method="POST">
           <input type="hidden" name="id" value=<?= $id ?>>
           <div class="form-group">
-            <input class="form-control" type="text" name="comentario" placeholder="Escribe aquí tu comentario">
+            <input required pattern=".*\S+.*" class="form-control" type="text" name="comentario" placeholder="Escribe aquí tu comentario">
           </div>
           <div class="form-group">
             <button class="btn btn-primary float-right" type="submit" name="submit">Comentar</button>
