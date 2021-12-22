@@ -34,7 +34,7 @@ $fechaNueva = $fechaFormateada[0] . 'T' . $fechaFormateada[1];
 
                     <div class="col-12 ml-1 mb-2 text-center text-md-left">
                         <lable class="h4 mb-2" for="título">Título</lable>
-                        <input class="rounded-lg col-12 h-20 bg form-control  mt-2" style="background-color: #ffff; font-size: 20px; height: 60px; margin-top: 5px" type="text" name="titulo" maxlength="200" value="<?= $titulo ?>" required />
+                        <input pattern="[a-zA-Z0-9 ]+" class="rounded-lg col-12 h-20 bg form-control  mt-2" style="background-color: #ffff; font-size: 20px; height: 60px; margin-top: 5px" type="text" name="titulo" maxlength="200" value="<?= $titulo ?>" required />
 
                     </div>
 
@@ -42,7 +42,7 @@ $fechaNueva = $fechaFormateada[0] . 'T' . $fechaFormateada[1];
 
                     <div class="col-12 ml-1 pb-3 text-center text-md-left">
                         <lable class=" h4" for="asunto">Asunto</lable>
-                        <textarea rows="2" class="pt-2 col-12 form-control rounded-lg mt-2" id="textarea" style="background-color: #ffff; resize: none; font-size: 20px; height: 120px; margin-top: 5px " maxlength="255" type="textarea" name="asunto" placeholder="Ejemplo: Votación para escoger presidente de la junta de vecinos" required><?= $asunto ?></textarea>
+                        <textarea pattern="[a-zA-Z0-9 ]+" rows="2" class="pt-2 col-12 form-control rounded-lg mt-2" id="textarea" style="background-color: #ffff; resize: none; font-size: 20px; height: 120px; margin-top: 5px " maxlength="255" type="textarea" name="asunto" placeholder="Ejemplo: Votación para escoger presidente de la junta de vecinos" required><?= $asunto ?></textarea>
                     </div>
 
                     <!-- FECHA TERMINO -->

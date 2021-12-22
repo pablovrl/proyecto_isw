@@ -40,7 +40,7 @@
 
                 <?php 
                   for($i=0;$i<$option;$i++){
-                    echo '<div class="col-12 pl-2 mt-3"><input class="form-control rounded-lg"  style="background-color: #ffff; font-size: 20px; height: 55px;"  type="text" name="opcion'.$numeroName++.'" placeholder="opción'.$numeroOpcion++.'" required></div><br>';
+                    echo '<div class="col-12 pl-2 mt-3"><input pattern="[a-zA-Z0-9 ]+" class="form-control rounded-lg"  style="background-color: #ffff; font-size: 20px; height: 55px;"  type="text" name="opcion'.$numeroName++.'" placeholder="opción'.$numeroOpcion++.'" required></div><br>';
                     
                   }
 

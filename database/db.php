@@ -6,7 +6,7 @@ $fechaActual = date("Y-m-d H:i");
 
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "";
+$db_pass = "admin";
 $db_name = "proyecto_isw";
 
 // Credenciales servidor

@@ -9,7 +9,7 @@ if (isset($_GET['enviar'])) {
         session_id("mensaje");
         session_start();
         $_SESSION['mensaje'] = 'Rango de fechas inválido';
-        $_SESSION['sub_mensaje'] = 'Por favor ingrese una fecha de inicio mayor o igual a la fecha de término en su búsqueda!';
+        $_SESSION['sub_mensaje'] = 'Por favor ingrese una fecha de inicio menor o igual a la fecha de término en su búsqueda!';
         $_SESSION['tipo'] = 'danger';
         session_write_close();
         header('Location: ../HU_listar_terminadas/terminadas.php');
